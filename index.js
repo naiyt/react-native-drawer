@@ -293,7 +293,7 @@ export default class Drawer extends Component {
 
   processShouldSet = (e, gestureState) => {
     let inMask = this.testPanResponderMask(e, gestureState)
-    if (!inMask) return false
+    // if (!inMask) return false
     this._panStartTime = Date.now()
     if (inMask && this.shouldCaptureGestures()) return true
     if (this.props.negotiatePan) return false
@@ -304,7 +304,7 @@ export default class Drawer extends Component {
 
   processMoveShouldSet = (e, gestureState) => {
     let inMask = this.testPanResponderMask(e, gestureState)
-    if (!inMask) return false
+    // if (!inMask) return false
     if (!this.props.acceptPan) return false
 
     if (!this.props.negotiatePan || this.props.disabled || !this.props.acceptPan || this._panning) return false
